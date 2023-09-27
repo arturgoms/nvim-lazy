@@ -1,6 +1,10 @@
 return {
 	{
-  "nyoom-engineering/oxocarbon.nvim"
+  "nyoom-engineering/oxocarbon.nvim",
+	 config = function()
+		vim.opt.background = "dark" -- set this to dark or light
+		vim.cmd("colorscheme oxocarbon")
+	 end
   -- Add in any other configuration;
   --   event = foo,
   --   config = bar
@@ -168,5 +172,10 @@ return {
 	--      vim.api.nvim_command("colorscheme moonbow")
 	--    end
 	--  }
-
+	--   {
+	--  dir = "~/projects/personal/moonbow.nvim",
+	--  config = function()
+	-- 	vim.cmd("colorscheme moonbow")
+	--  end
+	-- },
 }
