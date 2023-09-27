@@ -39,7 +39,7 @@ local options = {
   ruler = false,                           -- Don't show the ruler
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   title = true,                            -- set the title of window to the value of the titlestring
-  confirm = true,                          -- confirm to save changes before exiting modified buffer
+  confirm = false,                          -- confirm to save changes before exiting modified buffer
   fillchars = { eob = " " },
   -- cursorlineopt = "number",                -- set the cursorline
 }

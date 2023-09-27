@@ -4,9 +4,12 @@ return {
     version = false, -- last release is way too old and doesn't work on Windows
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter-textobjects",
-    },
+		dependencies = {
+			-- shows treesitter context in end of parenthesis
+			"haringsrob/nvim_context_vt",
+			"RRethy/nvim-treesitter-textsubjects",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+		},
     opts = function(_, opts)
       if type(opts.ensure_installed) == "table" then
         vim.list_extend(opts.ensure_installed, { "typescript", "tsx" })
@@ -14,6 +17,8 @@ return {
     end,
     config = function()
       require("nvim-treesitter.configs").setup {
+				sync_install = false,
+				ignore_install = {},
         highlight = {
           enable = true,
           additional_vim_regex_highlighting = false,

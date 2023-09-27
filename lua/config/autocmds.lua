@@ -2,7 +2,7 @@ local api = vim.api
 
 local colors = {
   fg = "#76787d",
-  bg = "#252829",
+  bg = "#222222",
 }
 
 -- don't auto comment new line
@@ -108,6 +108,7 @@ vim.api.nvim_create_autocmd("FileType", {
     "checkhealth",
     "neotest-summary",
     "neotest-output-panel",
+    "TelescopePrompt",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false

@@ -1,18 +1,17 @@
 return {
-  -- comments
-  { "JoosepAlviste/nvim-ts-context-commentstring", lazy = true },
-  {
-    "echasnovski/mini.comment",
-    event = "VeryLazy",
-    opts = {
-      hooks = {
-        pre = function()
-          require("ts_context_commentstring.internal").update_commentstring({})
-        end,
-      },
-    },
-    config = function(_, opts)
-      require("mini.comment").setup(opts)
-    end,
-  },
+	"terrortylor/nvim-comment",
+	config = function()
+		require('nvim_comment').setup()
+		require("which-key").register({
+			g = {
+				name = "go",
+				c = {
+					name = "comment",
+					c = "line",
+				}
+			}
+		})
+		local r = require("utils.remaps")
+		r.noremap("n", "<leader>/", ":CommentToggle<cr>", "Comment Line")
+	end,
 }

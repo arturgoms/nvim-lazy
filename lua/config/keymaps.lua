@@ -2,6 +2,9 @@ local opts = { noremap = true, silent = true }
 
 local map = vim.keymap.set
 
+local keymap = vim.api.nvim_set_keymap
+keymap("n", "<esc><esc>", "<cmd>nohlsearch<cr>", opts)
+
 -- map("n", "<C-Space>", ":WhichKey \\<space><cr>", opts)
 map("n", "<C-d>", "<C-d>zz", opts)
 map("n", "<C-u>", "<C-u>zz", opts)
@@ -22,8 +25,8 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- paste over currently selected text without yanking it
-map("v", "p", '"_dp')
-map("v", "P", '"_dP')
+map("v", "P", '"_dp')
+map("v", "p", '"_dP')
 
 -- copy everything between { and } including the brackets
 -- p puts text after the cursor,

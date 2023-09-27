@@ -7,7 +7,7 @@ return {
   config = function()
     require("bufferline").setup({
       options = {
-        always_show_bufferline = false,
+        always_show_bufferline = true,
         indicator = {
           icon = " ",
         },
@@ -22,7 +22,7 @@ return {
             text_align = "left",
           },
         },
-        modified_icon = "",
+        modified_icon = "●",
         -- custom_areas = {
         --     left = function()
         --         if vim.bo.filetype == "alpha" then
