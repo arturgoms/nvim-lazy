@@ -1,7 +1,6 @@
 return {
 	mode = { "n", "v" },
 	[";"] = { ":Alpha<CR>", "Dashboard" },
-	w = { ":w!<CR>", "Save" },
 	q = { ":confirm q<CR>", "Quit" },
 	S = { name = "Session" },
 	f = { "<cmd>lua require('plugins.utils').telescope_git_or_file()<CR>", "Find Files" },
@@ -132,6 +131,9 @@ return {
 	},
 	t = {
 		name = "+Tests"
+	},
+	w = {
+		m = { ":MaximizerToggle<CR>", "Toggle Maximizer" }
 	},
 	n = {
 		name = "+Fzf",

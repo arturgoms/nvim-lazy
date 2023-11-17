@@ -46,7 +46,7 @@ local options = {
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
+vim.g.syntastic_python_pylint_post_args = '--max-line-length=120'
 for k, v in pairs(options) do
   vim.opt[k] = v
 end

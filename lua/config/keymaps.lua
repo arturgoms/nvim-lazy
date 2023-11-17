@@ -54,3 +54,18 @@ map("n", "<CR>", "ciw", opts)
 
 -- map ; to resume last search
 map("n", ";", "<cmd>lua require('telescope.builtin').resume(require('telescope.themes').get_dropdown({}))<cr>", opts)
+
+-- Harpoon
+keymap("n", ".", "<cmd>lua require('harpoon.ui').nav_next()<cr>", opts)
+keymap("n", ",", "<cmd>lua require('harpoon.ui').nav_prev()<cr>", opts)
+
+map("n", "<S-m>1", "<cmd>require('harpoon.ui').nav_file(1)<CR>", opts)
+map("n", "<S-m>2", "<cmd>require('harpoon.ui').nav_file(2)<CR>", opts)
+map("n", "<S-m>3", "<cmd>require('harpoon.ui').nav_file(3)<CR>", opts)
+map("n", "<S-m>4", "<cmd>require('harpoon.ui').nav_file(4)<CR>", opts)
+map("n", "<S-m>5", "<cmd>require('harpoon.ui').nav_file(5)<CR>", opts)
+map("n", "<S-m>6", "<cmd>require('harpoon.ui').nav_file(6)<CR>", opts)
+map("n", "<S-m>7", "<cmd>require('harpoon.ui').nav_file(7)<CR>", opts)
+map("n", "<S-m>8", "<cmd>require('harpoon.ui').nav_file(8)<CR>", opts)
+map("n", "<S-m>9", "<cmd>require('harpoon.ui').nav_file(9)<CR>", opts)
+map("n", "<S-m>0", "<cmd>require('harpoon.ui').nav_file(0)<CR>", opts)
